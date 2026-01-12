@@ -10,7 +10,7 @@ The current version of hivdrm script is the  modifed version of https://github.c
 
 - Install conda (if not already present): https://docs.conda.io/projects/conda/en/latest/user-guide/install/linux.html
 - Install mamba: `conda install mamba -n base -c conda-forge`
-- Clone hivdrm: `git clone https://github.com/rinkideo/hivdrm.git`
+- Clone hivdrm repo
 - `cd hivdrm`
 - Create conda environment to run hivdrm: `mamba env create -n hivdrm_production --file environment.yml`
 - add hivdrm to PATH: `export PATH=/path/to/hivdrm:$PATH` in .bashrc or .bash_profile
