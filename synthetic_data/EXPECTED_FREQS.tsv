@@ -1,0 +1,17 @@
+sample	DRM pattern	# sequence	DRM pattern%	Individual DRM Totals (%)
+synth1	M184V	1	14.3%	-
+synth1	K103N	1	14.3%	-
+synth1	Y181C	1	14.3%	-
+synth1	V106M	1	14.3%	-
+synth1	M184I	1	14.3%	-
+synth1	WT	1	14.3%	-
+synth1	NO_CALL	1	14.3%	-
+synth1	TOTAL	7	100%	M184V: 1 (14.3%) | K103N: 1 (14.3%) | Y181C: 1 (14.3%) | V106M: 1 (14.3%) | M184I: 1 (14.3%)
+
+synth2	M184V	5	17.2%	-
+synth2	K103N,V108I,M184V	4	13.8%	-
+synth2	K103N,M184V	2	6.9%	-
+synth2	K103N	10	34.5%	-
+synth2	WT	8	27.6%	-
+synth2	TOTAL	29	100%	M184V: 11 (37.9%) | K103N: 16 (55.2%) | V108I: 4 (13.8%)
+
