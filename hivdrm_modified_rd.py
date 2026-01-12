@@ -1,7 +1,5 @@
 #!/usr/bin/env python3
 
-# usage nivdrm.py r1.fq.gz r2.fq.gz
-
 import os
 import re
 import csv
@@ -30,8 +28,6 @@ import threading, queue
 
 queue = queue.Queue()
 mutex = threading.Lock()
-
-##hivdrm_work_dir = "/n/scratch/users/r/rid241/DRMV_proj/data/synthetic_dataruns/synth_outs_RD"
 
 
 
@@ -303,9 +299,7 @@ def get_consensus(family, threshold=0.8):
         else:
             s_consensus += "N"
     return s_consensus
-######################################################################################
-###REMOVED THIS SERGEY"S PART of calling consensus
-######################################################################################
+
 
 
 def remove_insertion(seq_list):
@@ -390,17 +384,6 @@ def s8_make_consensus(sample, min_family_size = 5, max_family_size = 1000000, th
                 with open(result_file, "a") as f:
                     f.write(f">UMI_{umi}_FAMSIZE_{len(family)}_LEN_{len(s_consensus)}\n")
                     f.write(s_consensus + "\n")
-        #fname = f"LEN_{len(s_consensus)}_{filename}"
-        #with open(fname, "a") as f:
-        #    for i, seq in enumerate(family):
-        #        f.write(f">{umi}{i}\n")
-        #        f.write(seq + "\n")
-            # save a umi family for debug
-            #else:
-            #    with open(filename, "a") as f:
-            #    for i, seq in enumerate(family):
-            #        f.write(f">{umi}{i}\n")
-            #        f.write(seq + "\n")
     result_handle.close()
 
 def s8_make_consensus_worker():
