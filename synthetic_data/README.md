@@ -19,19 +19,6 @@ The primary goals of this synthetic dataset are to:
 This dataset is intended for testing and validation only and does not represent
 biological samples.
 
-## Dataset description
-
-Synthetic reads were generated to simulate an Illumina-like paired-end sequencing
-run covering the HIV-1 Reverse Transcriptase (RT) region
-(HXB2 positions 54–235).
-
-The synthetic sequences were constructed to test multiple pipeline edge cases,
-including:
-
-- Variable family sizes
-- Consensus generation behavior under an 80% threshold
-- Sequences with minor length differences
-- Robust handling of output generation and downstream processing
 
 ## Contents
 
