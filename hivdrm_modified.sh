@@ -8,23 +8,26 @@
 #SBATCH -c 10
 #SBATCH --mem=160G 
 #SBATCH --output=..../hivdrm_%j.out     
-#SBATCH --error=..../hivdrm_%j.err  
+#SBATCH --error=..../hivdrm_%j.err     
 
 date
-# Code directory (kept in home)
-INP_DIR=~/DRMV/hivdrm
+
+# input files and code directory
+INP_DIR= ~/path_to_code_and_inp_files.
 
 cd $INP_DIR
 module load conda/miniforge3/24.11
-conda activate hivdrm_production1
+conda activate hivdrm_production
+
+# Scratch working/output directory
+cd $OUT_DIR
 
 
-
-python $INP_DIR/hivdrm_old.py \
+python $INP_DIR/hivdrm_modified.py \
 --barcodes $INP_DIR/barcodes.csv \
---ref $INP_DIR/reference.fasta \
+--ref $INP_DIR/referencefile.fasta \
 --threads 10 \
-$INP_DIR/reads_R1.fq.gz $CODE_DIR/synthetic_546nt_data/synthetic_simEF_v15/reads_R2.fq.gz
+$INP_DIR/reads_R1.fq.gz $INP_DIR/reads_R2.fq.gz --outdir $OUT_DIR/outputfolder
 
 
 conda deactivate
