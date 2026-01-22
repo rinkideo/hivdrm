@@ -5,7 +5,7 @@ This directory contains a synthetic dataset generated to validate the modified
 
 The dataset was designed to reproduce a realistic high-throughput amplicon
 sequencing scenario while allowing direct comparison between the upstream and
-modified implementations. :contentReference[oaicite:0]{index=0}
+modified implementations.
 
 ## Purpose
 
@@ -23,7 +23,7 @@ biological samples.
 
 Synthetic reads were generated to simulate an Illumina-like paired-end sequencing
 run covering the HIV-1 Reverse Transcriptase (RT) region
-(HXB2 positions 54–235). :contentReference[oaicite:1]{index=1}
+(HXB2 positions 54–235).
 
 The synthetic sequences were constructed to test multiple pipeline edge cases,
 including:
@@ -37,25 +37,23 @@ including:
 
 Typical directory structure:
 
+```text
 synthetic_data/
-├── reads_R1.fq.gz
-├── reads_R2.fq.gz
+├── r1.fq.gz
+├── r2.fq.gz
 ├── barcodes.csv
-└── reference.fasta
-└── expected_output/
-├── expected_DRM.xlsx
+├── reference.fasta
+└── expected_DRM.xlsx
 └── expected_freq.xlsx
-
 
 - **Input files** replicate a standard `hivdrm` run configuration.
 - **Expected output files** represent the intended results produced by the modified pipeline.
 
-
 ## How to use
 
-1. Configure `hivdrm.sh` to point to the synthetic input files.
+1. Configure `hivdrm.sh` to point to the synthetic input files located in this directory.
 2. Run the pipeline using the modified implementation.
-3. Compare generated outputs against files in `expected_output/`.
+3. Compare the generated outputs against the files in `expected_output/`.
 
 This comparison can be used as a lightweight validation check after code changes
 or dependency updates.
@@ -65,5 +63,4 @@ or dependency updates.
 - Output file names and pipeline steps are identical to the upstream implementation.
 - Differences are limited to output values and robustness of execution.
 - This dataset is provided for transparency and reproducibility.
-
 
