@@ -45,6 +45,7 @@ synthetic_data/
 ├── reference.fasta
 └── expected_DRM.xlsx
 └── expected_freq.xlsx
+```
 
 - **Input files** replicate a standard `hivdrm` run configuration.
 - **Expected output files** represent the intended results produced by the modified pipeline.
